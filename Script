@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Print name
+echo "Hello Hackbio"
+echo "Name: Adedoye Obafolaju"
+
+# Create main project directories
+mkdir -p hackbio/bash_course/module_1
+mkdir -p obafolaju_stage_zero
+mkdir -p Obafolaju
+mkdir -p Biocomputing
+
+# Move into hackbio folder
+cd hackbio
+
+# Create a sample text file
+echo "This is my Hackbio file" > hackbio_file.txt
+
+# Copy file into bash_course
+cp hackbio_file.txt bash_course/
+
+# Move file into module_1
+mv bash_course/hackbio_file.txt bash_course/module_1/
+
+# Download example datasets into Biocomputing
+cd ../Biocomputing
+wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.fna
+wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
+
+# Move one dataset into Obafolaju
+mv wildtype.fna ../Obafol
